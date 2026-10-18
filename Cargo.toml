@@ -1,0 +1,27 @@
+[package]
+name = "plc-common"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+publish = false
+description = "PLC 共用函式庫：家族（驅動型號）的位址語法、位址類別與範圍資料表，以及標量值（ScalarValue）與標量型別（ScalarType）"
+
+[dependencies]
+serde = { version = "1.0.229", features = ["derive"] }
+
+[dev-dependencies]
+serde_yaml_ng = "0.10.0"
+
+[workspace]
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+must_use_candidate = "allow"
+module_name_repetitions = "allow"
+too_many_lines = "allow"
